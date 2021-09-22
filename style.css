@@ -82,10 +82,10 @@ body {
   padding: 0.8em 2em;
   position: relative;
   top: 1em;
-  transition: transform 100ms;
+  transition: transform box-shadow 100ms;
 }
 
-.get-started:focus {
+.get-started:active {
   /* transform: translateX(2.3em); */
   transform: translateX(0.3em) translateY(0.3em);
   box-shadow: none;
