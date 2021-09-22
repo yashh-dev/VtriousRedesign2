@@ -8,6 +8,7 @@
   --ff-primary: "Open Sans", sans-serif;
   --ff-secondary: "Source Code Pro", monospace;
   font-size: 16px;
+  font-weight: bold;
   --fw-reg: 300;
   --fw-bold: 900;
 
@@ -46,6 +47,9 @@
   } */
   header ul {
     display: none;
+  }
+  .container p {
+    width: 100%;
   }
 }
 
@@ -103,6 +107,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
 }
 
 header ul {
@@ -120,24 +125,38 @@ header li {
 .logo-img {
   max-width: 8em;
 }
-
-.container {
+.page {
   display: flex;
   align-items: center;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.container {
   /* padding: 5.5rem 6rem 2rem; */
   padding-left: 5.5em;
   height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
-.container h1 {
+.page1 h1 {
   color: var(--clr-primary);
   max-width: 62%;
-  font-size: 3.25em;
+  font-size: 3.5em;
   margin: 0;
 }
-.container p {
+.page1 p {
   max-width: 30%;
 }
 
+.page2 {
+  display: flex;
+}
+.page2-h2 {
+  flex: 50;
+}
+.page2-p {
+  flex: 50;
+}
 /* FOOTER */
 
 footer {
