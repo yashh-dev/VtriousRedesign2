@@ -7,7 +7,7 @@
 :root {
   --ff-primary: "Oswald", sans-serif;
   --ff-secondary: "Source Code Pro", monospace;
-
+  font-size: 16px;
   --fw-reg: 300;
   --fw-bold: 900;
 
@@ -15,7 +15,7 @@
   --clr-dark: #303030;
   --clr-accent: #3aa9d7;
 
-  --fs-h1: 310.125rem;
+  --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
@@ -26,6 +26,7 @@
 
 @media (min-width: 800px) {
   :root {
+    font-size: 18px;
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
@@ -50,7 +51,10 @@ header {
   background-image: url(./images/background.png);
   background-size: cover;
   height: 30em;
-  background-blend-mode: overlay;
+}
+.logo_img {
+  max-width: 8em;
+  padding: 1em;
 }
 nav {
   display: flex;
@@ -59,7 +63,7 @@ nav {
 
 .hero-title {
   text-align: center;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
   color: var(--clr-accent);
   font-size: var(--fs-h1);
@@ -82,7 +86,7 @@ nav {
   position: relative;
   display: block;
   width: calc(133% + 1.3px);
-  height: 206px;
+  height: 20%;
 }
 
 .custom-shape-divider-top-1632206151 .shape-fill {
