@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 :root {
@@ -13,7 +13,7 @@
 
   --clr-light: #fff;
   --clr-dark: black;
-  --clr-accent: #3aa9d7;
+  --clr-accent: #0182fe;
   --clr-primary: #151965;
   --clr-secondary: #212798;
   --fs-h1: 3rem;
@@ -23,6 +23,7 @@
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+  transition: font-size 250ms;
 }
 
 @media (min-width: 800px) {
@@ -32,6 +33,19 @@
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
+  }
+}
+@media (max-width: 1100px) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px) {
+  /* :root {
+    font-size: 12px;
+  } */
+  header ul {
+    display: none;
   }
 }
 
@@ -47,6 +61,35 @@ body {
   color: black;
 }
 
+/* BUTTONS */
+
+.contact-us {
+  font-size: 0.8em;
+  text-decoration: none;
+  color: var(--clr-light);
+  padding: 0.25em 0.75em;
+  margin: 2em 2em;
+  background-color: var(--clr-secondary);
+  border-radius: 10px;
+}
+
+.get-started {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
+  box-shadow: 0.3em 0.3em 0 black;
+  padding: 0.8em 2em;
+  position: relative;
+  top: 1em;
+  transition: transform 100ms;
+}
+
+.get-started:focus {
+  /* transform: translateX(2.3em); */
+  transform: translateX(0.3em) translateY(0.3em);
+  box-shadow: none;
+}
 /* Header */
 
 header {
@@ -77,25 +120,34 @@ header li {
 .logo-img {
   max-width: 8em;
 }
-.contact-us {
-  font-size: 0.8em;
-  text-decoration: none;
-  color: var(--clr-light);
-  padding: 0.25em 0.75em;
-  margin: 2em 2em;
-  background-color: var(--clr-secondary);
-  border-radius: 10px;
-}
 
 .container {
-  padding: 5.5rem 6rem 2rem;
+  display: flex;
+  align-items: center;
+  /* padding: 5.5rem 6rem 2rem; */
+  padding-left: 5.5em;
   height: 100vh;
 }
 .container h1 {
   color: var(--clr-primary);
-  max-width: 60%;
+  max-width: 62%;
   font-size: 3.25em;
+  margin: 0;
 }
 .container p {
   max-width: 30%;
+}
+
+/* FOOTER */
+
+footer {
+  position: fixed;
+  right: 6em;
+  bottom: 2em;
+}
+footer a {
+  padding: 1em;
+}
+footer a img {
+  width: 1.2em;
 }
