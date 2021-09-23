@@ -9,7 +9,7 @@
   --ff-secondary: "Source Code Pro", monospace;
   font-size: 16px;
   font-weight: bold;
-  --fw-reg: 300;
+  --fw-reg: 600;
   --fw-bold: 900;
 
   --clr-light: #fff;
@@ -18,7 +18,7 @@
   --clr-primary: #151965;
   --clr-secondary: #212798;
   --fs-h1: 3rem;
-  --fs-h2: 2.25rem;
+  --fs-h2: 2.75rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
@@ -31,7 +31,7 @@
   :root {
     font-size: 18px;
     --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h2: 2.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -42,9 +42,6 @@
   }
 }
 @media (max-width: 900px) {
-  /* :root {
-    font-size: 12px;
-  } */
   header ul {
     display: none;
   }
@@ -55,7 +52,8 @@
 
 /* General styles */
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
+  /* overflow: hidden; */
 }
 
 body {
@@ -129,14 +127,14 @@ header li {
   display: flex;
   align-items: center;
   height: 100vh;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 .container {
   /* padding: 5.5rem 6rem 2rem; */
   padding-left: 5.5em;
   height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  /* scroll-snap-type: y mandatory;
+  overflow-y: scroll; */
 }
 .page1 h1 {
   color: var(--clr-primary);
@@ -150,12 +148,88 @@ header li {
 
 .page2 {
   display: flex;
+  align-items: center;
+
+  padding-right: 5.5em;
 }
-.page2-h2 {
+.page2-h2,
+.page3-h2,
+.page4-h2 {
   flex: 50;
+  color: var(--clr-primary);
+  font-size: var(--fs-h2);
+  text-transform: uppercase;
+}
+.page2-h2 span,
+.page3-h2 span,
+.page4-h2 span,
+.page5-h2 span,
+.page6-h2 span {
+  color: var(--clr-accent);
+  display: block;
 }
 .page2-p {
   flex: 50;
+}
+
+.page3 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.page3-h2 {
+  font-size: 2em;
+  min-width: 7em;
+}
+.page5-h2,
+.page6-h2 {
+  color: var(--clr-primary);
+  font-size: 2em;
+}
+.page5,
+.page6 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.page6 {
+  padding-right: 5.5em;
+}
+.article {
+  flex: 1;
+}
+.page5 p,
+.page6 p {
+  font-size: 0.8em;
+  font-weight: 300;
+  width: 80%;
+}
+.macbook {
+  flex: 2;
+  height: 60vh;
+}
+.services {
+  font-size: 0.6em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.service {
+  z-index: 1000;
+  max-width: 28vh;
+  margin: 1.2em;
+  padding: 1em 3em;
+  border-radius: 11px;
+  box-shadow: 11px 11px 30px #969696, -11px -11px 30px #ffffff;
+  transition: transform 100ms;
+}
+.service p {
+  font-weight: 300;
+}
+
+.service:hover,
+.service-h1:hover {
+  transform: scale(1.2);
 }
 /* FOOTER */
 
