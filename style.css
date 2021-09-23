@@ -27,6 +27,17 @@
   transition: font-size 250ms;
 }
 
+.next {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+.prev {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+}
+
 @media (min-width: 800px) {
   :root {
     font-size: 18px;
@@ -52,8 +63,8 @@
 
 /* General styles */
 html {
-  /* scroll-behavior: smooth; */
-  /* overflow: hidden; */
+  scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 body {
