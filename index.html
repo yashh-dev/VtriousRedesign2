@@ -22,6 +22,13 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link href="http://fonts.cdnfonts.com/css/sofia-pro" rel="stylesheet" />
     <title>Vtrious Technologies</title>
   </head>
   <body>
@@ -32,25 +39,28 @@
         <img class="logo-img" src="./images/logo.png" />
       </div>
       <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Our Services</li>
-        <li>Latest Works</li>
-        <li>Join Us</li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#our-services">Our Services</a></li>
+        <li><a href="#works">Latest Works</a></li>
+        <li><a href="#join-us">Join Us</a></li>
       </ul>
-      <a href="http://" class="contact-us">Contact Us</a>
+      <a href="#contact-us" class="contact-us">Contact Us</a>
     </header>
     <button onclick="next()" class="next">next</button
     ><button onclick="prev()" class="prev">prev</button>
-    <div class="container">
+    <div class="container" id="home">
       <div class="page">
         <section class="page1">
-          <h1>Infinite possibilities one stop Solution.</h1>
-          <p>We create web and app exclusively crafted for you!</p>
-          <a href="" class="get-started">Get Started</a>
+          <article>
+            <h1 class="page1-h1">Infinite possibilities one stop Solution.</h1>
+            <p>We create web and app exclusively crafted for you!</p>
+            <a href="#about-us" class="get-started">Get Started</a>
+          </article>
+          <img src="./images/Vector.svg" alt="" />
         </section>
       </div>
-      <div class="page">
+      <div class="page" id="about-us">
         <section class="page2">
           <h2 class="page2-h2">
             where innovation meets <span>excellence</span>
@@ -66,7 +76,7 @@
           </p>
         </section>
       </div>
-      <div class="page">
+      <div class="page" id="our-services">
         <section class="page3">
           <h2 class="page3-h2">OUR SERVICES FOR <span>YOU!</span></h2>
           <div class="services">
@@ -119,12 +129,16 @@
           </div>
         </section>
       </div>
-      <div class="page">
+      <div class="page" id="works">
         <section class="page4">
-          <h2 class="page4-h2">OUR RECENT <span>WORK</span></h2>
+          <article>
+            <h2 class="page4-h2">OUR RECENT <span>WORKS</span></h2>
+            <a href="#work1" class="get-started">View our works</a>
+          </article>
+          <img src="./images/ongoing.png" alt="" />
         </section>
       </div>
-      <div class="page">
+      <div class="page" id="work1">
         <section class="page5">
           <article>
             <h2 class="page5-h2">Muga Conferencing <span>Website</span></h2>
@@ -166,6 +180,76 @@
             </p>
           </article>
           <img class="macbook" src="./images/mac.png" alt="" />
+        </section>
+      </div>
+      <!-- <div class="page" id="join-us">
+        <section class="page7">
+          <h2>Explore a career at <span>Introis Technologies</span></h2>
+          <div class="flex-image">
+            <img class="images" src="./images/num1.png" alt="" />
+            <div class="three-images">
+              <img class="images" src="./images/num2.png" alt="" />
+              <img class="images" src="./images/num3.png" alt="" />
+              <img class="images" src="./images/num4.png" alt="" />
+            </div>
+            <img class="images" src="./images/num5.png  " alt="" />
+          </div>
+        </section>
+      </div> -->
+      <div class="page" id="contact-us">
+        <section class="page8">
+          <h2>We’d Love to Hear From You</h2>
+          <!-- <div class="icons">
+            <div class="icon">
+              <img
+                class="contact-icons"
+                src="./images/facebook-square-brands.svg"
+                alt=""
+              />
+              <p>Lorem ipsum</p>
+            </div>
+            <div class="icon">
+              <img
+                class="contact-icons"
+                src="./images/instagram-square-brands.svg"
+                alt=""
+              />
+              <p>lorem ipsum</p>
+            </div>
+            <div class="icon">
+              <img
+                class="contact-icons"
+                src="./images/linkedin-brands.svg"
+                alt=""
+              />
+              <p>lorem ipsum</p>
+            </div>
+          </div> -->
+          <div class="bottom-sheet">
+            <form action="">
+              <div class="flex-sheet">
+                <div>
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" id="name" />
+                  <label for="mail">Mail</label>
+                  <input type="email" name="mail" id="mail" />
+                  <label for="phone">Phone</label>
+                  <input type="tel" name="phone" id="phone" />
+                </div>
+                <div>
+                  <label for="message">Message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="10"
+                    placeholder="Write your message here!"
+                  ></textarea>
+                </div>
+              </div>
+              <button type="submit" class="submit">Submit</button>
+            </form>
+          </div>
         </section>
       </div>
     </div>
